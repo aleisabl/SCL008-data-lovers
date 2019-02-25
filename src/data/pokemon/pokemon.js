@@ -1,3 +1,5 @@
+
+
 const POKEMON = {
   "pokemon": [{
     "id": 1,
@@ -4084,4 +4086,6 @@ const POKEMON = {
     ]
   }]
 }
-;;
+;
+
+window.POKEMON = POKEMON;
