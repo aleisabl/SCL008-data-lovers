@@ -8,15 +8,21 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color:#5e7e7f;;
-  color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  border-top-color: rgb(23, 162, 184);
+  border-right-color: rgb(23, 162, 184);
+  border-bottom-color: rgb(23, 162, 184);
+  border-left-color: rgb(23, 162, 184);
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: #118192;
 }
 
 /* #myBtnGoBack {
@@ -340,8 +346,18 @@
   text-align: center;
   letter-spacing: 0.1em;
   color: #5E7E7F;
+  border: 1px solid #ccc;
+  height: 34px;
+  width: 268px;
+  
 
 }
+
+  .styled-select {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+ }
 
 /* chartsito */
 .chartsito {

@@ -198,43 +198,6 @@ function orderThisBackwards() {
 
 window.onload = showData(data)
 
-
-function drawChart() {
-
-  /* function drawChart() {
-    let dataWater = [];
-     window.data.computeStats(data).forEach(element => {
-       dataWater.push(element);
-     })
-  
-  
-    var data = google.visualization.arrayToDataTable([
-      ['Water', dataWater]
-    ]);
-  
-    var options = {
-      title: 'Pokémon Data'
-    };
-  
-    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
-  
-    var data = google.visualization.arrayToDataTable([
-      ['Water', dataWater]
-    ]);
-    var options = {
-      title: 'Pokémon Data'
-    };
-    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
-    
-  }
-    
-  document.getElementById('chart-btn').addEventListener( "click" , () => {
-    document.getElementById('piechart').removeAttribute('hidden');
-    drawChart(dataWater)
-  }) */
-
   function drawChart() {
 
     var data = google.visualization.arrayToDataTable([
@@ -247,7 +210,11 @@ function drawChart() {
     ]);
 
     var options = {
-      title: 'Tipo de Pokemon en Kanto'
+      title: 'Tipo de Pokemon en Kanto',
+      width: 400,
+      height: 200,
+      title: 'Tipos de Pokémon',
+      colors: ['blue', 'red', 'green', 'yellow', 'purple'],
 
     };
 
@@ -260,7 +227,6 @@ function drawChart() {
     document.getElementById('piechart').removeAttribute('hidden');
     drawChart()
   })
-}
 
 //mostrando dato curioso
 
