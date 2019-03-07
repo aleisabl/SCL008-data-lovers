@@ -4,32 +4,32 @@ const card = document.getElementById('card');
 
 //botón responsive para ir arriba de la página
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
- if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-   document.getElementById("myBtn").style.display = "block";
- } else {
-   document.getElementById("myBtn").style.display = "none";
- }
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
 }
 
 function topFunction() {
- document.body.scrollTop = 0;
- document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
-document.getElementById('myBtn').addEventListener( "click" , () => {
+document.getElementById('myBtn').addEventListener("click", () => {
   topFunction()
 })
 
 //cartas de los pokémon, adentro se pusieron modales
 
 const showData = (data) => {
-  
+
   data.forEach(element => {
     card.innerHTML +=
-    `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
+      `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
     <div class= "card-name">
     <p> ${element.num}</p>
     <a href="#"><img class= "card-img-top" src="${element.img}" alt="Card image cap"></a>
@@ -64,14 +64,14 @@ const showData = (data) => {
     </div>`
 
     //mostrar pokémon ordenados por tipos
- 
+
     document.getElementById('select-type').addEventListener('change', () => {
 
-      let condition = document.getElementById('select-type').value; 
+      let condition = document.getElementById('select-type').value;
       let result = window.filterData(data, condition);
       card.innerHTML = '';
       result.forEach(element => {
- 
+
         card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
         <div class= "card-name">
         <p> ${element.num}</p>
@@ -113,11 +113,11 @@ const showData = (data) => {
 //mostrar pokémon ordenados por orden alfabético
 
 document.getElementById('select-order').addEventListener("change", orderThis);
-function orderThis () {
-let result = window.sortData(data);
- card.innerHTML = "";
- result.forEach(element => {
-   card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
+function orderThis() {
+  let result = window.sortData(data);
+  card.innerHTML = "";
+  result.forEach(element => {
+    card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
    <div class= "card-name">
    <p> ${element.num}</p>
    <a href="#"><img class= "card-img-top" src="${element.img}" alt="Card image cap"></a>
@@ -150,17 +150,17 @@ let result = window.sortData(data);
    </div>
    </div>
    </div>`
- })
+  })
 }
 
 //orden alfabético al revés
 
 document.getElementById('select-order').addEventListener("change", orderThisBackwards);
-function orderThisBackwards () {
-let result = window.sortDataBackwards(data);
- card.innerHTML = "";
- result.forEach(element => {
-   card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
+function orderThisBackwards() {
+  let result = window.sortDataBackwards(data);
+  card.innerHTML = "";
+  result.forEach(element => {
+    card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
    <div class= "card-name">
    <p> ${element.num}</p>
    <a href="#"><img class= "card-img-top" src="${element.img}" alt="Card image cap"></a>
@@ -193,79 +193,79 @@ let result = window.sortDataBackwards(data);
    </div>
    </div>
    </div>`
- })
+  })
 }
 
 window.onload = showData(data)
 
 
- function drawChart() {
-
-/* function drawChart() {
-  let dataWater = [];
-   window.data.computeStats(data).forEach(element => {
-     dataWater.push(element);
-   })
-
-
-  var data = google.visualization.arrayToDataTable([
-    ['Water', dataWater]
-  ]);
-
-  var options = {
-    title: 'Pokémon Data'
-  };
-
-  let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-
-  var data = google.visualization.arrayToDataTable([
-    ['Water', dataWater]
-  ]);
-  var options = {
-    title: 'Pokémon Data'
-  };
-  let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-  
-}
-  
-document.getElementById('chart-btn').addEventListener( "click" , () => {
-  document.getElementById('piechart').removeAttribute('hidden');
-  drawChart(dataWater)
-}) */
-
 function drawChart() {
 
-  var data = google.visualization.arrayToDataTable([
-    ['Pokemon', 'Tipos'],
-    ['Agua',     25.5],
-    ['Fuego',      14.8],
-    ['Planta',  60.7],
-    ['Electrico', 47.1],
-    ['Veneno',    7.3]
-  ]);
-
-  var options = {
-    title: 'Tipo de Pokemon en Kanto'
+  /* function drawChart() {
+    let dataWater = [];
+     window.data.computeStats(data).forEach(element => {
+       dataWater.push(element);
+     })
+  
+  
+    var data = google.visualization.arrayToDataTable([
+      ['Water', dataWater]
+    ]);
+  
+    var options = {
+      title: 'Pokémon Data'
+    };
+  
+    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  
+    var data = google.visualization.arrayToDataTable([
+      ['Water', dataWater]
+    ]);
+    var options = {
+      title: 'Pokémon Data'
+    };
+    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
     
-  };
+  }
+    
+  document.getElementById('chart-btn').addEventListener( "click" , () => {
+    document.getElementById('piechart').removeAttribute('hidden');
+    drawChart(dataWater)
+  }) */
 
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  function drawChart() {
 
-  chart.draw(data, options);
-}	
+    var data = google.visualization.arrayToDataTable([
+      ['Pokemon', 'Tipos'],
+      ['Agua', 25.5],
+      ['Fuego', 14.8],
+      ['Planta', 60.7],
+      ['Electrico', 47.1],
+      ['Veneno', 7.3]
+    ]);
 
-document.getElementById('chart-btn').addEventListener( "click" , () => {
-  document.getElementById('piechart').removeAttribute('hidden');
-  drawChart()
-})
- }
+    var options = {
+      title: 'Tipo de Pokemon en Kanto'
+
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+
+  document.getElementById('chart-btn').addEventListener("click", () => {
+    document.getElementById('piechart').removeAttribute('hidden');
+    drawChart()
+  })
+}
 
 //mostrando dato curioso
 
 document.getElementById("show-dato").innerHTML += `¿Sabías que los pokémon tipo agua son el ${window.computeStats(data)} % de la región de Kanto?`
-  
+
 
 document.getElementById("btn-start").addEventListener("click", () => {
 
@@ -280,7 +280,7 @@ document.getElementById("kanto-img").addEventListener("click", () => {
   document.getElementById("screen3").removeAttribute('hidden');
 
   //guardando valor del input usuario en variable y msotrándolo en pantalla
-  
+
   let usernameValue = document.getElementById('username').value;
   document.getElementById('show-username').innerHTML += ` ${usernameValue}!`;
 

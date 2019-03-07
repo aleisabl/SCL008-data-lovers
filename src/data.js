@@ -1,4 +1,5 @@
 //función para filtrar la data por tipos de pokémon
+
 const filterData = (data, condition) => {
   let filter = data.filter(element => {
     return element.type.includes(condition) === true;
@@ -10,33 +11,35 @@ window.filterData = filterData;
 
 //función para ordenar la data de la A a la Z
 const sortData = data => {
-  let sort = data.sort( (a, b) => a.name.localeCompare(b.name));
+  let sort = data.sort((a, b) => a.name.localeCompare(b.name));
   return sort;
-} 
-  window.sortData=sortData;
+}
+
+window.sortData = sortData;
 
 //función para ordenar la data de la Z a la A 
- const sortDataBackwards = data =>{
-   let sortBackwards = data.sort( (a,b)=> a.name.localeCompare(b.name));
-   return sortBackwards.reverse();
- }
+
+const sortDataBackwards = data => {
+  let sortBackwards = data.sort((a, b) => a.name.localeCompare(b.name));
+  return sortBackwards.reverse();
+
+}
 
 window.sortDataBackwards = sortDataBackwards;
 
 //función para calcular porcentaje de los Pokémon agua en Kanto (32)
+
 window.computeStats = (data) => {
+
   let num = [];
-  for (let i=0; i<data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     if (data[i].type.includes('Water') === true) {
       num.push(data[i]);
     }
-    
   }
-  let calculate = (num.length*100)/data.length;
+  let calculate = (num.length * 100) / data.length;
   let resultCalculation = calculate.toFixed(1);
   return resultCalculation;
-} 
+}
 
 window.computeStats = computeStats;
-
-

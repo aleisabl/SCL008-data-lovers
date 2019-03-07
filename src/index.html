@@ -1,174 +1,172 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
- <title>Poképedia Go</title>
+  <title>Poképedia Go</title>
 
- <link rel="stylesheet" media="(max-width: 800px)" href="style.css" />
- <link rel="shortcut icon" href="Pokeball.ico">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" media="(max-width: 800px)" href="style.css" />
+  <link rel="shortcut icon" href="Pokeball.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
 
-<!-- Comienza primera pantalla, se muestra el logo, la bienvenida, inputs, etc -->
+  <!-- Comienza primera pantalla, se muestra el logo, la bienvenida, inputs, etc -->
 
- </head>
+</head>
 
- <body>
+<body>
 
-     <div id="screen1">
+  <div id="screen1">
+    <div class="container-fluid bg1">
+      <div class="row">
+        <div class="col-sm-6">
+          <img class="logo" src="img/pokepedia.png" alt="logopokepedia">
+        </div>
+        <div class="col-sm-6">
+          <p class="input-username-password">¡Hola! Por favor ingresa un usuario y contraseña.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="introduction">
+            La app ligada a Pokémon Go que te ayuda a investigar sobre tus Pokémon favoritos, ver estadísticas sobre
+            ellos, manejar tu progreso y muchas cosas más.
+          </p>
+        </div>
+        <div class="col-sm-6 input">
+          <div class="input-group flex-nowrap">
+            <input type="text" id="username" class="rounded-pill" placeholder="Usuario" aria-label="Usuario">
+          </div>
 
-   <div class="container-fluid bg1">
-     <div class="row">
-       <div class="col-sm-6">
-         <img class="logo" src="img/pokepedia.png" alt="logopokepedia">
-       </div>
-       <div class="col-sm-6">
-         <p class="input-username-password">¡Hola! Por favor ingresa un usuario y contraseña.</p>
-       </div>
-     </div>
+          <div class="input-group flex-nowrap">
+            <input type="password" class="rounded-pill" placeholder="Contraseña" aria-label="Contraseña">
+          </div>
+          <button type="button" id="btn-start" class="rounded-pill">INGRESAR</button>
+        </div>
 
-     <div class="row">
-       <div class="col-sm-6">
-         <p class= "introduction">
-           La app ligada a Pokémon Go que te ayuda a investigar sobre tus Pokémon favoritos, ver estadísticas sobre ellos, manejar tu progreso y muchas cosas más.
-         </p>
+      </div>
+    </div>
 
-       </div>
-       <div class="col-sm-6 input">
-         <div  class="input-group flex-nowrap">
-           <input type="text" id="username" class="rounded-pill"  placeholder="Usuario" aria-label="Usuario" >
-         </div>
-         <div  class="input-group flex-nowrap">
-           <input type="password" class="rounded-pill"  placeholder="Contraseña" aria-label="Contraseña" >
-         </div>
-         <button type="button" id="btn-start" class="rounded-pill">INGRESAR</button>
-
-       </div>
-     </div>
-   </div>
-
-
- </div>  <!-- fin div primera pantalla -->
-
-<!-- Comienza segunda pantalla, se muestran los mapas -->
-   <div hidden id = "screen2">
-
-     <div class="container-fluid bg2" >
-       <div class="row">
-         <p class= "select-zone">
-           Por favor selecciona la Zona que quieres ver
-         </p>
-
-         <div class="col-6">
-           <a href="#"><img class= "kanto" id ="kanto-img" src="img/kanto.png" alt="kanto"></a>
-           <div class="col-6">
-             <a href="#"><img class= "hoenn" id ="hoenn-img" src="img/hoenn.png" alt="hoenn"></a>
-             <div class="row">
-               <div class="col-6">
-                 <a href="#"><img class= "sinnoh" id ="sinnoh-img" src="img/sinnoh.png" alt="sinnoh"></a>
-                 <div class="col-6">
-                   <a href="#"><img class= "johto" id ="johto-img" src="img/johto.png" alt="johto"></a>
+  </div> <!-- fin div primera pantalla -->
 
 
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
+  <!-- Comienza segunda pantalla, se muestran los mapas -->
 
-
-   </div> <!--  fin div segunda pantalla -->
-<!--comienza tercera pantalla, se muestran las tarjetas-->
-   <div hidden id="screen3">
-
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-         <img src="img/AVATAR.png" style="width: 6%;" alt="avatar">
-           <a id="show-username" class="navbar-brand">¡Bienvenido</a>
-           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-text" aria-controls="navbar-text" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-           </button>
-           <div class="collapse navbar-collapse" id="navbar-text">
-               <section>
-                   <span class="navbar-text">
-                       Filtra por tipos <i>fuego, agua...</i>
-                     </span>
-               <select id="select-type">
-                   <option value="0">Seleccionar...</option> <!-- debería ser: ver todos -->
-                   <option value="Water">Agua</option>
-                   <option value="Fire">Fuego</option>
-                   <option value="Grass">Planta</option>
-                   <option value="Poison">Veneno</option>
-                   <option value="Electric">Eléctrico</option>
-                   <option value="Rock">Roca</option>
-                   <option value="Bug">Insecto</option>
-                   <option value="Flying">Volador</option>
-                   <option value="Normal">Normal</option>
-                   <option value="Ground">Tierra</option>
-                   <option value="Psychic">Psíquico</option>
-                   <option value="Ice">Hielo</option>
-                   <option value="Ghost">Fantasma</option>
-                   <option value="Fighting">Peleador</option>
-                 </select>
-               </section>
-               <section>
-                   <span class="navbar-text">
-                       Ordena alfabéticamente...
-                     </span>
-               <select id="select-order" >
-                   <option value="0">Seleccionar...</option>
-                   <option value="a-to-z">A...Z</option>
-                   <option value="z-to-a">Z...A</option>
-                 </select>
-               </section>
-               <section>
-               <span class="navbar-text">
-                 Dato curioso...
-                 <!-- <button id="show-dato">Dato curioso</button> -->
-                 
-                 <!-- <input id="show-dato" class="form-control" type="text" readonly> -->
-               </span>
-               <p id="show-dato"></p>
-
-               <button type="button" id="chart-btn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Estadísticas</button>
-               <div hidden id="piechart" class="chartsito" style="width: 600px; height: 220px;" ></div>
-
-              </section>
+  <div hidden id="screen2">
+    <div class="container-fluid bg2">
+      <div class="row">
+        <p class="select-zone">
+          Por favor selecciona la Zona que quieres ver
+        </p>
+        <div class="col-6">
+          <a href="#"><img class="kanto" id="kanto-img" src="img/kanto.png" alt="kanto"></a>
+          <div class="col-6">
+            <a href="#"><img class="hoenn" id="hoenn-img" src="img/hoenn.png" alt="hoenn"></a>
+            <div class="row">
+              <div class="col-6">
+                <a href="#"><img class="sinnoh" id="sinnoh-img" src="img/sinnoh.png" alt="sinnoh"></a>
+                <div class="col-6">
+                  <a href="#"><img class="johto" id="johto-img" src="img/johto.png" alt="johto"></a>
+                </div>
+              </div>
             </div>
-         </nav>
-        
-       <div class="container-fluid bg3">
-         <div class="row" id="card">
-         </div>
-       </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-       <button onclick="topFunction()" id="myBtn" title="Go to top">Ir Arriba</button>
-<!--        <button onclick="topFunctionGoBack()" id="myBtnGoBack" title="Go back">Ir Atrás</button>
- -->
+  </div> <!--  fin div segunda pantalla -->
 
-   </div> <!-- fin tercera pantalla -->
+  <!--comienza tercera pantalla, se muestran las tarjetas-->
 
-   <script src="./data/pokemon/pokemon.js"></script>
-   <script src="data.js"></script>
-   <script src="main.js"></script>
-   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-google.charts.load('current', {packages: ['corechart']});
-google.charts.setOnLoadCallback(drawChart); </script>
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div hidden id="screen3">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <img src="img/AVATAR.png" style="width: 6%;" alt="avatar">
+      <a id="show-username" class="navbar-brand">¡Bienvenido</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-text" aria-controls="navbar-text"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-text">
+        <section>
+          <span class="navbar-text">
+            Filtra por tipos <i>fuego, agua...</i>
+          </span>
+          <select id="select-type">
+            <option value="0">Seleccionar...</option> <!-- debería ser: ver todos -->
+            <option value="Water">Agua</option>
+            <option value="Fire">Fuego</option>
+            <option value="Grass">Planta</option>
+            <option value="Poison">Veneno</option>
+            <option value="Electric">Eléctrico</option>
+            <option value="Rock">Roca</option>
+            <option value="Bug">Insecto</option>
+            <option value="Flying">Volador</option>
+            <option value="Normal">Normal</option>
+            <option value="Ground">Tierra</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Ice">Hielo</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Fighting">Peleador</option>
+          </select>
+        </section>
+        <section>
+          <span class="navbar-text">
+            Ordena alfabéticamente...
+          </span>
+          <select id="select-order">
+            <option value="0">Seleccionar...</option>
+            <option value="a-to-z">A...Z</option>
+            <option value="z-to-a">Z...A</option>
+          </select>
+        </section>
+        <section>
+          <span class="navbar-text">
+            Dato curioso...
+            <!-- <button id="show-dato">Dato curioso</button> -->
+            <!-- <input id="show-dato" class="form-control" type="text" readonly> -->
+          </span>
 
-<div id="datocurioso">
+          <p id="show-dato"></p>
+          <button type="button" id="chart-btn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Estadísticas</button>
+          <div hidden id="piechart" class="chartsito" style="width: 600px; height: 220px;"></div>
+        </section>
+      </div>
+    </nav>
 
-   </div>
- </body>
+    <div class="container-fluid bg3">
+      <div class="row" id="card">
+      </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Ir Arriba</button>
 
- </html>
+    <!--        <button onclick="topFunctionGoBack()" id="myBtnGoBack" title="Go back">Ir Atrás</button>
+    -->
+
+  </div> <!-- fin tercera pantalla -->
+
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart); </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <div id="datocurioso">
+  </div>
+
+</body>
+
+</html>
