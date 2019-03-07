@@ -27,7 +27,6 @@ document.getElementById('myBtn').addEventListener( "click" , () => {
 
 const showData = (data) => {
   
-
   data.forEach(element => {
     card.innerHTML +=
     `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
@@ -52,7 +51,7 @@ const showData = (data) => {
     <div class="modal-body">
     <p class="pokemon-type"> <strong>Tipos:</strong> ${element.type} </p>
     <p class="pokemon-weaknesses"> <strong>Debilidades:</strong> ${element.weaknesses} </p>
-    <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy} </p>
+    <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy_count} ${element.candy}</p>
     <p class="pokemon-egg"> <strong>Distancia de huevo:</strong> ${element.egg} </p>
     <img id="egg-img" src= "img/egg.png" alt="egg img">
     <img id="egg-img" src= "img/Bulbasaur_candy.png" alt="candy img">
@@ -95,7 +94,7 @@ const showData = (data) => {
         <div class="modal-body">
         <p class="pokemon-type"> <strong>Tipos:</strong> ${element.type} </p>
         <p class="pokemon-weaknesses"> <strong>Debilidades:</strong> ${element.weaknesses} </p>
-        <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy} </p>
+        <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy_count} ${element.candy}</p>
         <p class="pokemon-egg"> <strong>Distancia de huevo:</strong> ${element.egg} </p>
         <img id="egg-img" src= "img/egg.png" alt="egg img">
         <img id="egg-img" src= "img/Bulbasaur_candy.png" alt="candy img">
@@ -140,7 +139,7 @@ let result = window.sortData(data);
    <div class="modal-body">
    <p class="pokemon-type"> <strong>Tipos:</strong> ${element.type} </p>
    <p class="pokemon-weaknesses"> <strong>Debilidades:</strong> ${element.weaknesses} </p>
-   <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy} </p>
+   <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy_count} ${element.candy}</p>
    <p class="pokemon-egg"> <strong>Distancia de huevo:</strong> ${element.egg} </p>
    <img id="egg-img" src= "img/egg.png" alt="egg img">
    <img id="egg-img" src= "img/Bulbasaur_candy.png" alt="candy img">
@@ -183,7 +182,7 @@ let result = window.sortDataBackwards(data);
    <div class="modal-body">
    <p class="pokemon-type"> <strong>Tipos:</strong> ${element.type} </p>
    <p class="pokemon-weaknesses"> <strong>Debilidades:</strong> ${element.weaknesses} </p>
-   <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy} </p>
+   <p class="pokemon-candy"> <strong>Caramelo:</strong> ${element.candy_count} ${element.candy}</p>
    <p class="pokemon-egg"> <strong>Distancia de huevo:</strong> ${element.egg} </p>
    <img id="egg-img" src= "img/egg.png" alt="egg img">
    <img id="egg-img" src= "img/Bulbasaur_candy.png" alt="candy img">
@@ -261,12 +260,12 @@ document.getElementById('chart-btn').addEventListener( "click" , () => {
   document.getElementById('piechart').removeAttribute('hidden');
   drawChart()
 })
+ }
 
 //mostrando dato curioso
 
 document.getElementById("show-dato").innerHTML += `¿Sabías que los pokémon tipo agua son el ${window.computeStats(data)} % de la región de Kanto?`
   
-}
 
 document.getElementById("btn-start").addEventListener("click", () => {
 
