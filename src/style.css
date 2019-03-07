@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 20px;
   right: 30px;
+  font-weight: 200;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -13,37 +14,35 @@
   border-radius: 4px;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   color: #fff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-  border-top-color: rgb(23, 162, 184);
-  border-right-color: rgb(23, 162, 184);
-  border-bottom-color: rgb(23, 162, 184);
-  border-left-color: rgb(23, 162, 184);
+  background-color: #62d39e;
+border-color: white;
+font-weight: 200;
+    color: white;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.5px;
 }
 
 #myBtn:hover {
-  background-color: #118192;
+  background-color: #186975;
 }
 
-/* #myBtnGoBack {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 200px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color:#5e7e7f;;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+a{
+  color: #14889F;
 }
 
-#myBtnGoBack:hover {
-  background-color: #555;
-} */
+
+.btn-lg{
+background-color: #62d39e;
+border-color: white;
+font-weight: 200;
+    color: white;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.5px;
+}
 
 /* tipografía de todo el proyecto */
 
@@ -325,6 +324,7 @@
   text-align: center;
   letter-spacing: 0.1em;
   color: #5E7E7F;
+  margin-left: -333px;
 }
 
 .form-control {
