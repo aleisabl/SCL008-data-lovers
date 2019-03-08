@@ -1,4 +1,6 @@
+/* global google, chart */
 /* Manejo del DOM */
+
 const data = window.POKEMON.pokemon;
 const card = document.getElementById('card');
 
@@ -210,7 +212,6 @@ function drawChart() {
   ]);
 
   var options = {
-    title: 'Tipo de Pokemon en Kanto',
     width: 400,
     height: 200,
     title: 'Tipos de Pokémon',
