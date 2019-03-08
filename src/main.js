@@ -219,9 +219,10 @@ function drawChart() {
 
   };
 
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  //var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
   chart.draw(data, options);
+  
 }
 
 document.getElementById('chart-btn').addEventListener("click", () => {
