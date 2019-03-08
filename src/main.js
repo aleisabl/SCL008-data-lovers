@@ -198,35 +198,35 @@ function orderThisBackwards() {
 
 window.onload = showData(data)
 
-  function drawChart() {
+function drawChart() {
 
-    var data = google.visualization.arrayToDataTable([
-      ['Pokemon', 'Tipos'],
-      ['Agua', 25.5],
-      ['Fuego', 14.8],
-      ['Planta', 60.7],
-      ['Electrico', 47.1],
-      ['Veneno', 7.3]
-    ]);
+  var data = google.visualization.arrayToDataTable([
+    ['Pokemon', 'Tipos'],
+    ['Agua', 21.2],
+    ['Fuego', 14.8],
+    ['Planta', 60.7],
+    ['Electrico', 47.1],
+    ['Veneno', 7.3]
+  ]);
 
-    var options = {
-      title: 'Tipo de Pokemon en Kanto',
-      width: 400,
-      height: 200,
-      title: 'Tipos de Pokémon',
-      colors: ['blue', 'red', 'green', 'yellow', 'purple'],
+  var options = {
+    title: 'Tipo de Pokemon en Kanto',
+    width: 400,
+    height: 200,
+    title: 'Tipos de Pokémon',
+    colors: ['blue', 'red', 'green', 'yellow', 'purple'],
 
-    };
+  };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-    chart.draw(data, options);
-  }
+  chart.draw(data, options);
+}
 
-  document.getElementById('chart-btn').addEventListener("click", () => {
-    document.getElementById('piechart').removeAttribute('hidden');
-    drawChart()
-  })
+document.getElementById('chart-btn').addEventListener("click", () => {
+  document.getElementById('piechart').removeAttribute('hidden');
+  drawChart()
+})
 
 //mostrando dato curioso
 
@@ -264,5 +264,3 @@ document.getElementById("johto-img").addEventListener("click", () => {
   alert("Esta zona todavía no está disponible, disculpa las molestias")
 
 });
-
-
