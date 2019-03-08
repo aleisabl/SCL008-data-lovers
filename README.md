@@ -111,8 +111,6 @@ Una vez definido el diseño general de la página, se hicieron nuevamente test d
 * [Segundo testeo a usuario de nivel medio. Primera parte](https://www.useloom.com/share/fd965f3a3f5e43359808e94d7c01b0c5)
 * [Segundo testeo a usuario de nivel medio. Segunda parte](https://www.useloom.com/share/22ded8e0170340ba98f4a35cf6683a9b)
 
-* Aqui va otro link de testeo a usuario 
-
 
 El feedback que pudimos rescatar de estos testeos fue principalmente:
 
