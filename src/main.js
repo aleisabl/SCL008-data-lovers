@@ -1,6 +1,13 @@
 /* global google, chart */
 /* Manejo del DOM */
 
+fetch('https://raw.githubusercontent.com/aleisabl/SCL008-data-lovers/master/src/data/pokemon/pokemon.json')
+    .then( data => {
+      console.log(data)
+      return data.json();
+    }) 
+    .catch(err=>console.log(err))
+
 const data = window.POKEMON.pokemon;
 const card = document.getElementById('card');
 
@@ -219,7 +226,7 @@ function drawChart() {
 
   };
 
-  //var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
   chart.draw(data, options);
   

@@ -24,6 +24,7 @@ font-weight: 200;
     letter-spacing: 2.5px;
 }
 
+
 #myBtn:hover {
   background-color: #186975;
 }
@@ -134,7 +135,7 @@ font-weight: 200;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
+  
 
 }
 
@@ -401,5 +402,17 @@ font-weight: 200;
     @media (max-width: 500px) {
       .html{
         width: 115%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container-fluid{
+        width: 110%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .navbar{
+        width: 110%;
       }
     }
