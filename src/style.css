@@ -135,8 +135,7 @@ font-weight: 200;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  
-
+  height: 100vh;
 }
 
 /* Titulo: Selecciona la zona que quieres */
