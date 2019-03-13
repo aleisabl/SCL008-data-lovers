@@ -386,8 +386,8 @@ font-weight: 200;
   
   /* Mediaquery para ajustar fondos en los teléfonos*/
 
-  @media (max-width: 600px) {
-    .bg1 {
+   @media (max-width: 600px) {
+    .bg1, .bg2 {
       height: 100%;
     }
   }
