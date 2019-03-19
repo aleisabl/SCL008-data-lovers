@@ -17,23 +17,21 @@ const sortData = data => {
 
 window.sortData = sortData;
 
-//función para ordenar la data de la Z a la A 
+//función para ordenar la data de la Z a la A
 
 const sortDataBackwards = data => {
   let sortBackwards = data.sort((a, b) => a.name.localeCompare(b.name));
   return sortBackwards.reverse();
-
 }
 
 window.sortDataBackwards = sortDataBackwards;
 
 //función para calcular porcentaje de los Pokémon agua en Kanto (32)
-
 window.computeStats = (data) => {
 
   let num = [];
   for (let i = 0; i < data.length; i++) {
-    if (data[i].type.includes('Water') === true) {
+    if (data[i].type.includes('Water', 'Fire', 'Grass', 'Poison', 'Electric', 'Rock', 'Bug', 'Flying', 'Normal', 'Ground') === true) {
       num.push(data[i]);
     }
   }

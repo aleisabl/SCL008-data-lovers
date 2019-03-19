@@ -1,12 +1,64 @@
 /* global google, chart */
 /* Manejo del DOM */
 
-fetch('https://raw.githubusercontent.com/aleisabl/SCL008-data-lovers/master/src/data/pokemon/pokemon.json')
-    .then( data => {
-      console.log(data)
-      return data.json();
-    }) 
-    .catch(err=>console.log(err))
+/* ------------Aquí logré acceder a la data y mostrarla con fetch, pero no logré todavía que agarrara las funciones del data.js-----------------
+
+const getData = () => {
+
+  fetch(url)
+    .then(resp => {
+      return resp.json();
+    })
+
+    .then(function (data) {
+      showData(data)
+    })
+
+    .catch(error => error)
+}
+
+window.onload = getData;
+
+const showData = (data) => {
+  for (let i = 0; i < data.pokemon.length; i++){
+    card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${data.pokemon[i].id}" class="card" style= "width: 8rem;">
+    <div class= "card-name">
+    <p> ${data.pokemon[i].num}</p>
+    <a href="#"><img class= "card-img-top" src="${data.pokemon[i].img}" alt="Card image cap"></a>
+    <p class="pokemon-name"> ${data.pokemon[i].name}</p>
+    <div class="modal fade" id="exampleModal${data.pokemon[i].id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <div>
+    </div>
+    <div>
+    <h5 class="modal-title" id="exampleModalLabel">${data.pokemon[i].name}</h5>
+    <img  class = "pokemon-modal-img" src="${data.pokemon[i].img}" alt="modal img">
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <p class="pokemon-type"> <strong>Tipos:</strong> ${data.pokemon[i].type} </p>
+    <p class="pokemon-weaknesses"> <strong>Debilidades:</strong> ${data.pokemon[i].weaknesses} </p>
+    <p class="pokemon-candy"> <strong>Caramelo:</strong> ${data.pokemon[i].candy_count} ${data.pokemon[i].candy}</p>
+    <p class="pokemon-egg"> <strong>Distancia de huevo:</strong> ${data.pokemon[i].egg} </p>
+    <img id="egg-img" src= "img/egg.png" alt="egg img">
+    <img id="egg-img" src= "img/Bulbasaur_candy.png" alt="candy img">
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="see-more">Cerrar</button>
+    </div>
+    </div>
+    </div>
+    </div>`
+
+  }
+} */
+
+
 
 const data = window.POKEMON.pokemon;
 const card = document.getElementById('card');
@@ -121,9 +173,9 @@ const showData = (data) => {
 
 //mostrar pokémon ordenados por orden alfabético
 
-document.getElementById('select-order').addEventListener("change", orderThis);
-function orderThis() {
-  let result = window.sortData(data);
+document.getElementById('select-order').addEventListener("change", () => {
+  let condition = document.getElementById('select-order').value;
+  let result = window.sortData(data, condition);
   card.innerHTML = "";
   result.forEach(element => {
     card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
@@ -160,13 +212,13 @@ function orderThis() {
    </div>
    </div>`
   })
-}
+})
 
 //orden alfabético al revés
 
-document.getElementById('select-order').addEventListener("change", orderThisBackwards);
-function orderThisBackwards() {
-  let result = window.sortDataBackwards(data);
+document.getElementById('select-order').addEventListener("change", () => {
+  let condition = document.getElementById('select-order').value;
+  let result = window.sortDataBackwards(data, condition);
   card.innerHTML = "";
   result.forEach(element => {
     card.innerHTML += `<div data-toggle="modal" data-target="#exampleModal${element.id}" class="card" style= "width: 8rem;">
@@ -203,7 +255,7 @@ function orderThisBackwards() {
    </div>
    </div>`
   })
-}
+})
 
 window.onload = showData(data)
 
@@ -229,7 +281,7 @@ function drawChart() {
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
   chart.draw(data, options);
-  
+
 }
 
 document.getElementById('chart-btn').addEventListener("click", () => {
