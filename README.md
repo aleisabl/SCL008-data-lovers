@@ -5,7 +5,6 @@
 ## 👀 ¿De qué se trata? 
 [Pokepedia Go!](https://aleisabl.github.io/SCL008-data-lovers/src/index.html) es una aplicación web responsiva que esta diseñada para jugadores de nivel medio de [Pokémon Go!](https://www.pokemongo.com/es-es/) . Esta te permite acceder a información detallada sobre tus Pokémon favoritos y buscar intuitivamente características y estadísticas que quieras conocer. 
 
-*[¡Ingresa a nuestra aplicación!](#¡ingresa-a-nuestra-aplicación!)
 * [¿Cómo funciona?](#¿cómo-funciona?)
 * [Objetivos de la aplicación](#objetivos-de-la-aplicación )
 * [Planificación del proyecto](#planificación-del-proyecto)
@@ -18,7 +17,7 @@
 
 ***
 
-## ¡Ingresa a nuestra aplicación!
+## Primero que todo, te invitamos a ingresar a nuestra aplicación
 [Aquí](https://aleisabl.github.io/SCL008-data-lovers/src/index.html)
 ***
 ## 💡 ¿Cómo funciona? 
