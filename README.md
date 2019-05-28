@@ -3,8 +3,9 @@
 
 
 ## 👀 ¿De qué se trata? 
-**Poképedia** es una aplicación web responsiva que esta diseñada para jugadores de nivel medio de [Pokémon Go!](https://www.pokemongo.com/es-es/) . Esta te permite acceder a información detallada sobre tus Pokémon favoritos y buscar intuitivamente características y estadísticas que quieras conocer. 
+[Pokepedia Go!] (https://aleisabl.github.io/SCL008-data-lovers/src/index.html) es una aplicación web responsiva que esta diseñada para jugadores de nivel medio de [Pokémon Go!](https://www.pokemongo.com/es-es/) . Esta te permite acceder a información detallada sobre tus Pokémon favoritos y buscar intuitivamente características y estadísticas que quieras conocer. 
 
+*[¡Ingresa a nuestra aplicación!](#¡ingresa-a-nuestra-aplicación!)
 * [¿Cómo funciona?](#¿cómo-funciona?)
 * [Objetivos de la aplicación](#objetivos-de-la-aplicación )
 * [Planificación del proyecto](#planificación-del-proyecto)
@@ -16,6 +17,9 @@
 
 
 ***
+
+## ¡Ingresa a nuestra aplicación!
+[Aquí] (https://aleisabl.github.io/SCL008-data-lovers/src/index.html)
 
 ## 💡 ¿Cómo funciona? 
 Poképedia es una aplicación web que te permite enlazar tu cuenta de Pokémon Go a la plataforma y asi crear un *perfil de usuario*, en este puedes guardar y ver estadísticas de tus progresos en el juego y también de tus Pokémon favoritos revisados dentro de la misma app. 
