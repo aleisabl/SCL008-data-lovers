@@ -1,5 +1,6 @@
 # Poképedia
 ![Logo Poképedia](pokepedia-logo.png)
+![Poképedia](Screenshot.png)
 
 
 ## 👀 ¿De qué se trata? 

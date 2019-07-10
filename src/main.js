@@ -277,8 +277,8 @@ function drawChart() {
     colors: ['blue', 'red', 'green', 'yellow', 'purple'],
 
   };
-
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+/* 
+  var chart = new google.visualization.PieChart(document.getElementById('piechart')); */
 
   chart.draw(data, options);
 
